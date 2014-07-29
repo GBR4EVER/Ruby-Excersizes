@@ -24,14 +24,16 @@ puts "1 + 2 = #{1 + 2}"
 # 3.  Create two variables and assign a number to each of them. Then create a third variable and assign to it the sum of the first two. Print all three to the screen like so: 3 + 7 = 10.
 a = 2
 b = 4
-puts "2 + 4 = #{a + b}"
+c = "#{a + b}"
+puts "#{a} + #{b} = #{c}"
 # Output: 2 + 4 = 6
 #-------------------------------------------------------------
 
 # 4. Do the same as #2, but see what happens if one of the numbers is a floating point number (e.g. 4.2). What happens if both numbers are floating point numbers?
 a = 2.4
 b = 4
-puts "2.4 + 4 = #{a + b}"
+c = "#{a + b}"
+puts c
 # Output: 2.4 + 4 = 6.4
 #-------------------------------------------------------------
 
