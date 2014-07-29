@@ -47,7 +47,7 @@ n = gets.chomp.to_i
 
 if n > 0
   puts "Valid"
-else n < 0
+else n >= 0
   puts "Invalid"
 end
 #-------------------------------------------------------------
