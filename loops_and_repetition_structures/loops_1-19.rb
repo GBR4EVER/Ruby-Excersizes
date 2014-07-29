@@ -68,5 +68,71 @@ print "------------------------\n"
 #-----------------------------------------------------------------------------
 
 # 4. Learn how to use ranges (both inclusive and exclusive) to do numeric iteration.
+# When using ranges, we decide what two integers or values we want set our range from beginning to end.
+# So if we want to display all the intergers 1 through 15 we place .. in between the two values to tell the console to include all numbers within the range.  This would be a inclusive iteration.
+# For Example
+for num in 1..15
+  puts num
+end
+
+print "-------------------------\n"
+
+# If we didn't want to include the last integer of our range (max value)
+# We would add one more ... to the range between the two integers.
+# For Example
+for num in 1...15
+  puts num
+end
+#------------------------------------------------------------------------------
+print "--------------------------\n"
+
+# 5. Write a program which prompts the user for a positive odd number, and which keeps prompting the user until they successfully input such a number.
+
+print "Please enter a odd number\n"
+number = gets.chomp.to_i
+
+while number % 2 == 0
+  puts "You entered a even number, odd please!"
+  number = gets.chomp.to_i
+  break if number % 2 != 0
+end
+# Here we used the break command to stop the loop if the obtained integer is odd. Without this command, the loop would continue to run.
+puts "Great you entered a odd number!"
+
+print "---------------------------\n"
+#-------------------------------------------------------------------------------
+
+# 6. Implement the Collatz Conjecture. Print out each step of the process, and keep track of how many steps it takes to arrive at 1.
+# The Collatz Conjecture is a mathmatical proccess that when taking any natural number (n) If n is even, divide it by 2 to get n / 2. If n is odd, multiply it by 3 and add 1 to obtain 3n + 1. Repeat the process till you reach 1.
+def collatz()
+  print "Please enter a positive number\n"
+  number = gets.chomp.to_i
+  while number != 1 do
+    if number % 2 == 0
+      number = number / 2
+      puts number
+    else number % 2 != 0
+      number = number * 3 + 1
+      puts number
+      break if number == 1
+    end
+  end
+end
+collatz
+
+print "-----------------------------\n"
+#---------------------------------------------------------------------------------
+
+# 7. Write a program which prints the integer factors of a positive integer (for example, the integer factors of 28 are 1, 2, 4, 7, 14, and 28).
+def int()
+  print "Please enter a integer, I will give you the factors to it\n"
+  number = gets.chomp.to_i
+end
+
+    
 
 
+
+    
+    
+      
