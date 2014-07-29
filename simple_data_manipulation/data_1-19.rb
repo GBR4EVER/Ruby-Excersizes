@@ -16,8 +16,5 @@ a = gets.chomp.to_i
 print "then the second number please?\n"
 b = gets.chomp.to_i
 
-print"I am now going to operate #{a} & #{b}, watch this!\n"
-c = "#{a}" + "#{b}"
-puts c
 
-operation_array = [ "#{a}", "#{b}" ]
+# 5. Write a program that takes a string, then uses the .upcase method to return the ALLCAPS version of that string, e.g. "Hello".upcase => "HELLO".
