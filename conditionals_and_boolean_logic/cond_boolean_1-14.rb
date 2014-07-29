@@ -45,7 +45,7 @@ end
 print "Give me a number, any number\n"
 n = gets.chomp.to_i
 
-if n <= 0
+if n > 0
   puts "Valid"
 else n < 0
   puts "Invalid"
@@ -53,14 +53,25 @@ end
 #-------------------------------------------------------------
 
 # 4. Write a program which prompts the user for a number and outputs "Valid" if the number is between 1 and 10 (inclusive) and "Invalid" otherwise.
-print "Give me a number between 1 and 10"
+print "Give me a number between 1 and 10\n"
 n = gets.chomp.to_i
 
-case n
-when n == 1..10
-  puts "Valid"
-when n < 10
-  puts "Invalid"
+def range(n)
+  if (1..10).include?(n)
+    puts "Valid"
+  elsif (11..20).include?(n)
+    puts "Invalid"
+  end
 end
+#-------------------------------------------------------------
 
-  
+# 5. Write a program which prompts the user for an integer and outputs whether than integer is even or odd (hint: even numbers have a remainder of 0 when divided by 2; odd numbers have a remainder of 1 when divided by 2)
+print "Please give me a number\n"
+number = gets.chomp.to_i
+
+if number / 2
+  puts "That is a even number!"
+else number / 2 % 1
+  puts "That is a odd number"
+end
+#-------------------------------------------------------------
