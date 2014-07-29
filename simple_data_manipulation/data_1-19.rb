@@ -10,15 +10,14 @@
 # <, >, <=, >= | LESS THAN. Returns true if first operand is less than second operand. Otherwise returns false, | GREATER THAN | Returns true if first operand is greater than second operand. Otherwise returns false, | GREATER THEN OR EQUAL TO | Returns true if first operand is greater than or equal to second operand, Otherwise returns false, | LESS THAN OR EQUAL TO | Returns true if first operand is less than or equal to second operand. Otherwise returns false.
 # <=> | 	Combined comparison operator. Returns 0 if first operand equals second, 1 if first operand is greater than the second and -1 if first operand is less than the second.
 
-print "Can you please give me two numbers starting with the first one?"
+print "Can you please give me two numbers starting with the first one?\n"
 a = gets.chomp.to_i
 
-print "then the second number please?"
+print "then the second number please?\n"
 b = gets.chomp.to_i
 
-print"I am now going to operate #{a} & #{b}, watch this!"
+print"I am now going to operate #{a} & #{b}, watch this!\n"
+c = "#{a}" + "#{b}"
+puts c
 
-operation_array = [a, b]
-
-operation_array.each { |x| puts "#{a}" + "#{b}" }
-
+operation_array = [ "#{a}", "#{b}" ]
