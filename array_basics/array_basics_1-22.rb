@@ -11,6 +11,10 @@ puts my_array
 # 2. Create (hard-code) an array. Prompt the user for an index, then print the array element at that index. What happens if the user tries to access a non-existent array element? What happens if the user tries to use a floating point number or a word as the index?
 new_array = [ 3, 6, 9, 12 ]
 print "Please enter a index number 0 through 3"
-index = gets.chomp.to_i
-if index >= 0..3
+int = gets.chomp.to_i
+if int > 0..3
+  puts "Negative, please enter a index 0 through 3!"
+else int == 0..3
+  new_array.index
+  
   
