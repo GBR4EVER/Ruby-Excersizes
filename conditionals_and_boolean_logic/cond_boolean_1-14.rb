@@ -89,5 +89,14 @@ end
 #--------------------------------------------------------------
 
 # 7. Write a program which prompts the user for an all-caps string and which then checks to see if that string is indeed all-caps.
-prints "Please enter a work in all caps\n"
+print "Please enter a word in all caps\n"
 caps = gets.chomp.to_s
+if caps == caps.upcase
+  puts "Thank you"
+elsif caps == caps.downcase
+  puts "It must be all caps!"
+end
+#---------------------------------------------------------------
+
+# 8. Create a menu (perhaps for food or drinks?) which asks the user to input a number corresponding to their choice of item, and which then prints "Delivering [that item]." Use a case statement. Make sure to account for invalid inputs using an else.
+
