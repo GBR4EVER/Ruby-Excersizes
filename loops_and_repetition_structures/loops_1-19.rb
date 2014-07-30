@@ -129,10 +129,4 @@ def int()
   number = gets.chomp.to_i
 end
 
-    
-
-
-
-    
-    
-      
+     
