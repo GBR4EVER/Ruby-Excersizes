@@ -15,6 +15,8 @@ int = gets.chomp.to_i
 if int > 0..3
   puts "Negative, please enter a index 0 through 3!"
 else int == 0..3
-  new_array.index
+  puts = int
+end
+
   
   
