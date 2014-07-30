@@ -30,11 +30,36 @@ def test2
   a = 4
   b = 6
   c = 8
-  return a, b, c
+  return a, b, c 
+  # Asking for all values will output all three values on their own lines. In this case 4 6 8.
 end
 var = test2
 puts test2
+#-----------------------------------------------------------
 
+# 3. Create a method called hello_world which takes no arguments and which prints Hello, World to the screen. Call this method.
+def hello_world
+  puts "Hello, World"
+end
+puts hello_world
+#-----------------------------------------------------------
+
+# 4. Create a method called greeting which takes a single argument (a name) and prints Hello, #{name} to the screen. Call this method with a few different names.
+def greeting
+  puts "please put in a name"
+  name = gets.chomp.upcase
+  puts "#{name}"
+end
+puts greeting
+#------------------------------------------------------------
+
+# 5. Create a method called sum_these_numbers which takes two integers as an argument and prints their sum to the screen.
+def sum_these_numbers
+  n1 = 2
+  n2 = 4
+
+  
+  
 
 
   
