@@ -10,11 +10,31 @@ call
 
 # 2. Learn the meanings of each of these terms regarding methods:
 
-#    Method signature/name
-#    Parameters
-#    Arguments (how are parameters and arguments different?)
-#    Method call
-#    Return values
-#    Method body
+# Method signature/name - This is the name that you will call the method by when you want the method to run.
+# Parameters - The parameters will always be surrounded by () and tells your method to remember these when running your the functions within the method. 
+# The most important drawback to using methods with parameters is that you need to remember the number of parameters whenever you call such methods. For example, if a method accepts three parameters and you pass only two, then Ruby displays an error.
+# Arguments (how are parameters and arguments different?)
+# Method call - Once you end your method, you may want to call by simple typing the def name of your method which will run the functions you specified within the method.
+# Return values - Every method in Ruby returns a value by default. This returned value will be the value of the last statement.
+# For Example
+def test
+  a = 30
+  b = 60
+  c = 90
+  #Everytime ruby will display the last variable in the method, in this case, 90.
+end
+puts test
+# The return statement in ruby is used to return one or more values from a Ruby Method.
+# For Example
+def test2
+  a = 4
+  b = 6
+  c = 8
+  return a, b, c
+end
+var = test2
+puts test2
+
+
 
   
