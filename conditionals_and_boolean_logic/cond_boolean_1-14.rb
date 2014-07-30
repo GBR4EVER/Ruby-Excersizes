@@ -42,7 +42,7 @@ end
 #------------------------------------------------------------
 
 # 3. Write a program which prompts the user for a number, outputs "Valid" if the number is positive, or "Invalid" if the number is less than or equal to zero.
-print "Give me a number, any number\n"
+print "Give me a positive number\n"
 n = gets.chomp.to_i
 
 if n > 0
@@ -55,13 +55,10 @@ end
 # 4. Write a program which prompts the user for a number and outputs "Valid" if the number is between 1 and 10 (inclusive) and "Invalid" otherwise.
 print "Give me a number between 1 and 10\n"
 n = gets.chomp.to_i
-
-def range(n)
   if (1..10).include?(n)
     puts "Valid"
-  elsif (11..20).include?(n)
+  else (11..20).include?(n)
     puts "Invalid"
-  end
 end
 #-------------------------------------------------------------
 
@@ -69,9 +66,28 @@ end
 print "Please give me a number\n"
 number = gets.chomp.to_i
 
-if number / 2
+if number % 2 == 0
   puts "That is a even number!"
-else number / 2 % 1
+else number % 2 == 1
   puts "That is a odd number"
 end
 #-------------------------------------------------------------
+
+# 6. Write a program which asks the user for 3 numbers and sorts them from least to greatest using nothing but if, elsif and else statements. Output the result.
+print "Please give me 3 numbers\n"
+n1 = gets.chomp.to_i
+n2 = gets.chomp.to_i
+n3 = gets.chomp.to_i
+
+if n1 <= n2 && n3
+  puts n1, n2, n3
+elsif n2 <= n1 && n3
+  puts n2, n1, n3
+else n3 <= n1 && n2
+  puts n3, n1, n2
+end
+#--------------------------------------------------------------
+
+# 7. Write a program which prompts the user for an all-caps string and which then checks to see if that string is indeed all-caps.
+prints "Please enter a work in all caps\n"
+caps = gets.chomp.to_s
