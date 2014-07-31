@@ -24,6 +24,5 @@ class Board
 
 end 
 
-  binding.pry
 #
 # end
