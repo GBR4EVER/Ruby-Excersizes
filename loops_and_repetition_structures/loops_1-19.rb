@@ -126,9 +126,8 @@ print "-----------------------------\n"
 # 7. Write a program which prints the integer factors of a positive integer (for example, the integer factors of 28 are 1, 2, 4, 7, 14, and 28).
 number = 44
 until number == 1
-  puts number
-  number = number / 2
-end
+  number / 2
+  
 #---------------------------------------------------------------------------------
 
 # 8. Write a program which, for any positive integer n, figures out n!. For example, 7! is 7 * 6 * 5 * 4 * 3 * 2 * 1.
