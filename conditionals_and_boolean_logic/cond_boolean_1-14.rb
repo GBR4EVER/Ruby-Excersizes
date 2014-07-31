@@ -75,17 +75,19 @@ end
 
 # 6. Write a program which asks the user for 3 numbers and sorts them from least to greatest using nothing but if, elsif and else statements. Output the result.
 print "Please give me 3 numbers\n"
-n1 = gets.chomp.to_i
-n2 = gets.chomp.to_i
-n3 = gets.chomp.to_i
-
-if n1 <= n2 && n3
-  puts n1, n2, n3
-elsif n2 <= n1 && n3
-  puts n2, n1, n3
-else n3 <= n1 && n2
-  puts n3, n1, n2
+a = gets.chomp.to_i
+b = gets.chomp.to_i
+c = gets.chomp.to_i
+# The iterators sort from greatest to least
+if (a < b && b > c && a < c)
+  puts b, c, a;
+elsif (a > b && b > c && a > c)
+  puts a, b, c;
+else (a < b && b < c && a < c)
+  puts c, b, a;
 end
+
+  
 #--------------------------------------------------------------
 
 # 7. Write a program which prompts the user for an all-caps string and which then checks to see if that string is indeed all-caps.
@@ -94,9 +96,42 @@ caps = gets.chomp.to_s
 if caps == caps.upcase
   puts "Thank you"
 elsif caps == caps.downcase
-  puts "It must be all caps!"
+  puts "Invalid, it must be all caps!"
 end
 #---------------------------------------------------------------
 
 # 8. Create a menu (perhaps for food or drinks?) which asks the user to input a number corresponding to their choice of item, and which then prints "Delivering [that item]." Use a case statement. Make sure to account for invalid inputs using an else.
+print "Enter your combo number\n"
+combo = gets.chomp.to_i
+case combo
+when "1"
+  puts "Burger"
+when "2"
+  puts "Nuggets"
+when "3"
+  puts "Chicken"
+when "4"
+  puts "Fish"
+else
+  puts "We only have combos 1 through 4\n"
+end
 
+puts "Delivering #{combo}"
+#-------------------------------------------------------------
+
+# 9. Learn how to use the ternary operator.
+# The ternary operator is puts a ? b : c
+# In grammatical terms below:
+# if_this_is_a_true_value ? then_the_result_is_this : else_it_is_this
+
+# However, in Ruby, if is also an expression so: if a then b else c end === a ? b : c, except for precedence issues. Both are expressions.
+# Some Examples.
+# puts (if 1 then 2 else 3 end) # => 2
+
+# puts 1 ? 2 : 3                # => 2
+
+# x = if 1 then 2 else 3 end
+# puts x                        # => 2
+#---------------------------------------------------------------
+
+# 10. Learn how to use the unless keyword.
