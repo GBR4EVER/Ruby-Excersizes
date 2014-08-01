@@ -6,8 +6,8 @@ class Game
   
   def initialize
     @turn = 1
-    #board = { a1: " ", a2: " ", a3: " ", b1: " ", b2: " ", b3: " ", c1: " ", c2: " ", c3: " " }
-    @board = { a1: "O", a2: "X", a3: "O", b1: "O", b2: "X", b3: "X", c1: "X", c2: "O", c3: "X" }
+    @board = { a1: " ", a2: " ", a3: " ", b1: " ", b2: " ", b3: " ", c1: " ", c2: " ", c3: " " }
+    #board = { a1: "O", a2: "X", a3: "O", b1: "O", b2: "X", b3: "X", c1: "X", c2: "O", c3: "X" }
   end
   
   # def start_game
