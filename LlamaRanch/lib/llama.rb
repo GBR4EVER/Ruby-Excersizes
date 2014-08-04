@@ -1,13 +1,10 @@
 #LlamaRanch/lib/llama.rb
 class Llama
+  attr_reader :name, :age
 
-  def initialize( name )
+  def initialize( name, age )
     @name = name
-  end
-
-  def name
-    @name
+    @age = age
   end
 
 end
-

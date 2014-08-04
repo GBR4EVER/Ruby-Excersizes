@@ -4,7 +4,14 @@ require "llama" # this is the class we're testing with
 
 describe Llama do
   it "should have a name that we assign to it at creation" do
-    llama = Llama.new("Rocky")
-    expect(llama.name).to eql("Rocky")
+    d = Llama.new("Rocky", 12)
+    expect(d.name).to eql("Rocky")
   end
+  
+  it "should have a age"
+  d = Llama.new("Rocky", 12)
+  expect(d.age).to eql(12)
+  end
+
 end
+
