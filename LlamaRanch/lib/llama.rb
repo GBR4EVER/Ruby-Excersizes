@@ -4,7 +4,19 @@ class Llama
 
   def initialize( name, age )
     @name = name
-    @age = age
+    @age = if age.class != Fixnum
+      0
+    elsif age >= 0
+      age
+    else
+      0
+    end
   end
 
+  def have_a_birthday
+    @age += 1
+  end
+
+
 end
+
