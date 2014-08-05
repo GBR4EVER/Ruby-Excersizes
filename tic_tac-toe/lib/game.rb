@@ -1,4 +1,4 @@
-
+require "pry"
 class Game
   attr_reader :turn
   
@@ -141,5 +141,7 @@ class Game
       
   
 end
+
+binding.pry
 
 
