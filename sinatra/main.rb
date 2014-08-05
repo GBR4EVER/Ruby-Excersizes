@@ -4,7 +4,9 @@ require "sinatra"
 require "sinatra/reloader"
 
 get "/" do
-  "Weclome, #{params['corey']}."
+  name = "Corey Burkley"
+  
+  erb :home # erb is taking the :home HTML file and embedding it.
 end
 
 get "/hello" do
