@@ -14,13 +14,14 @@ class Game
      x.player_turn
    end
   
-  def intro
+  def intro 
+    # Gives intro to the game that displays the title and board.
     puts "ULTIMATE TIC TAC TOE .. in ruby!\n"
     display_board
   end
   
   def player_symbol
-    # Determines Player 1s and Players 2s marker or symbol.
+    # Determines Player 1s and Player 2s marker or symbol.
     puts "Player 1, choose your marker, X or O?\n"
     i = gets.chomp.upcase 
     if i == "X"
