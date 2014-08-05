@@ -1,13 +1,13 @@
 require "pry"
 
 require "sinatra"
-require"sinatra/reloader"
+require "sinatra/reloader"
 
 require_relative "portfolio.rb"
 require_relative "stock.rb"
 
 get "/" do
-  if $portfolio.nil
+  if $portfolio.nil?
   $portfolio = Portfolio.new
 end
   erb :home
@@ -30,9 +30,7 @@ post "/save_stock" do
   
   # 3. Add that stock to the $portfolio.
   $portfolio.add_stock(s)
-  
-  binding.pry
-  
+    
   # 4. Show the updates portfolio table.
   erb :home
 end
