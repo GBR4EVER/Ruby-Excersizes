@@ -20,6 +20,7 @@ class Game
   end
   
   def player_symbol
+    # Determines Player 1s and Players 2s marker or symbol.
     puts "Player 1, choose your marker, X or O?\n"
     i = gets.chomp.upcase 
     if i == "X"
