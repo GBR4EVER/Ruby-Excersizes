@@ -1,6 +1,6 @@
 require "spec_helper"
-require "game"
-require "board"
+require "game.rb"
+require "board.rb"
 
 describe Game do
 
