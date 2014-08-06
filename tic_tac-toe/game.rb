@@ -1,11 +1,12 @@
 #require "pry"
 class Game
   attr_reader :turn
-  attr_accessor :board
+  attr_accessor :board :easy
   
   def initialize
     @turn = 1
     @board = { a1: " ", a2: " ", a3: " ", b1: " ", b2: " ", b3: " ", c1: " ", c2: " ", c3: " " }
+    @easy = easy
   end
   
    def start_game
@@ -24,17 +25,18 @@ class Game
   end
   
   def player_name
+    # Assigns player name to p1 and p2 as well as their corresponding marker.
     puts "Player 1, please enter your name.\n"
-    player1 = gets.chomp.upcase
+    player1 = gets.chomp.capitalize
     puts "Welcome #{player1}, you are marker 'X'.\n"
     @p1 = "X"
     
     puts "Player 2, please enter your name.\n"
-    player2 = gets.chomp.upcase
+    player2 = gets.chomp.capitalize
     puts "Welcome #{player2}, you are marker 'O'.\n"
     @p2 = "O"
   end
-    
+  
   # def player_symbol
   #   # Determines Player 1s and Player 2s marker or symbol.
   #   puts "Player 1, choose your marker, X or O?\n"
@@ -59,13 +61,13 @@ class Game
     # Determine player turn.
     # Pass to player_move.
     if @turn == 1
-      puts "Player 1 turn."
+      puts "Player 1 it is your turn."
       @turn = 2
       player_move(@p1)
     else
-      puts "Player 2 turn."
+      puts "Player 2 it is your turn."
       @turn = 1
-      player_move(@p2)
+      player_move(@easy)
     end
   end
 
