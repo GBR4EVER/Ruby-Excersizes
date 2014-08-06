@@ -36,6 +36,8 @@ class Portfolio
 # z - Abbreviation of stock's currency.
 # a - How many shares of Company's stock.
 #
+# ADD A STOCK'S PRICE PER SHARE
+# CREATE THE PORTFOLIO SO IT BELONGS TO A USER
   def new_com(x, y, z, a)
     x = Company.new(x, y, z, a)
     @port << x
