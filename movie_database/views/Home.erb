@@ -1,0 +1,27 @@
+<style>
+h1 {
+	font-family: Verdana;
+	color:  #FFCC33;
+	text-align: center;
+}
+
+body {
+	text-align: center;
+	background-color: #6699FF;
+}
+</style>
+
+<h1>Now Playing</h1>
+
+<body>
+
+	<form action="/search">
+		<p> search: <input type="text" name="query"> </p>
+	</form>
+
+
+	<% @now_playing.each do |n| %>
+		<img src="http://image.tmdb.org/t/p/w154/<%=n.poster_path%>" />
+	<% end %>
+
+</body>
