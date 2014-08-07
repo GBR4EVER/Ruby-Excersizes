@@ -18,6 +18,11 @@ require "sinatra/reloader"
 get "/" do
   @names = ["ball", "puck", "frisbee"]
   
+  
+  @names.each do |n|
+  
+  end
+end
   erb :home # erb is taking the :home HTML file and embedding it.
 end
 
