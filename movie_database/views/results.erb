@@ -11,10 +11,14 @@ body {
 }
 </style>
 
-<h2>Here are your results</h2>
-
 <body>
 
-	<% @search %>
+	<h2> Here are your results </h2>
+
+
+
+	<% @results.each do |n| %>
+		<img src="http://image.tmdb.org/t/p/w154/<%= n.poster_path %>" >
+	<% end %>
 
 </body>

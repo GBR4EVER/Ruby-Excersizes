@@ -15,8 +15,32 @@ body {
 }
 </style>
 
-<body>
-	
-	<h1><%= @movie.title %></h1>
+<h1>
+<%= @movies.title %>
+</h1>
 
+<body>
+
+
+	<h2>
+		<strong><i><%= @movies.tagline %></i></strong>
+	</h2>
+ 
+ 
+	<div style="float:left; width:20%; font-align:left">
+		<li>Budget: <%= @movies.budget %></li>
+		<li>Date: <%= @movies.release_date %></li>
+		<li>Status: <%= @movies.status %></li>
+	</div>
+ 
+	<div style="float:right; width:20%; margin-left:20px; text-align:left">
+		<% @cast.each do |key, value| %>
+			<li><strong><font color="red"><%= key %>:</strong></font> <%= value %></li>
+		<% end %>
+	</div>
+ 
+
+	<img src="<%=$configuration.base_url+"w342"+@movies.poster_path%>">
+
+	<%= @movies.overview %>
 </body>

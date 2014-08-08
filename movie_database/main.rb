@@ -14,15 +14,12 @@ get "/" do
 end
 
 get "/search" do
- @search = Tmdb::Movie.find(params["query"])
+ @search = Tmdb::Search.new
+ @search.resource("movie")
+ @search.query(params["query"])
+ @results = @search.fetch
  
- @search.movie_details = {}
- 
- 
- 
- 
-erb :results
-
+ erb :results
 end
 
 get "/movieid/:movieid" do
