@@ -16,8 +16,11 @@ end
 get "/search" do
  @search = Tmdb::Movie.find(params["query"])
  
+ @search.movie_details = {}
  
-binding.pry 
+ 
+ 
+ 
 erb :results
 
 end
