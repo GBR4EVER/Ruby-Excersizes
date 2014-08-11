@@ -1,0 +1,14 @@
+<% @all_todos.each do |t|  %>
+
+<p>
+	<%= t.home %> - <%= t.work %> - <%= t.estTime %>
+	
+	<% if t.how_long_may_take? %>
+	(Not too long.)
+	<% else %>
+	(Too Long)
+	<% end %>
+</p>
+
+<% end %>
+
