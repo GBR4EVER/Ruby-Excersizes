@@ -6,6 +6,12 @@ require "sinatra/reloader"
 
 require "sqlite3"
 
-db = SQLite3::Database.new "facebook.db"
+require_relative "./Todo.rb"
+
+get "/" do
+  @all_todos = Todo.all
+  erb :home
+end
+
 
 binding.pry
