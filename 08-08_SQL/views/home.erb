@@ -1,13 +1,7 @@
-<% @all_users.each do |u|  %>
+<% @users.each do |u_db|  %>
 
 <p>
-	<%= u.name %> - <%= u.task %> - <%= u.priority %>
-	
-	<% if u.priority_rate? %>
-	(Not too long.)
-	<% else %>
-	(Too Long)
-	<% end %>
+	<%= u_db.name %>
 </p>
 
 <% end %>
