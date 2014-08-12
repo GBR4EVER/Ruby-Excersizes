@@ -1,6 +1,9 @@
+require "pry"
+require "sqlite3"
+
 
 class Todo
-  attr_reader :id, :name, :task, :priority,
+  attr_reader :id, :name, :task, :priority
   
   def init(id, name, task, priority)
     @id = id
@@ -13,16 +16,22 @@ class Todo
     db = SQLite3::Database.new "ToDo.db"
     db.results_as_hash = true
     
+    binding.pry
+    
     all_users_from_db = db.execute("SELECT * FROM users")
     
+    all_users_as_user_objects = []
+    
     all_users_from_db.each do |u_db|
-      id = u_db[0]["id"]
-      name = u_db[0]["name"]
-      task = u_db[0]["task"]
-      priority = u_db[0]["priority"]
+      id = u_db["id"]
+      name = u_db["name"]
+      task = u_db["task"]
+      priority = u_db["priority"]
       
-      all_users_as_todo_objects << self.new(id, name, task, priority)
+      all_users_as_user_objects << self.new(id, name, task, priority)
     end
+    
+    binding.pry
     
     all_users_as_user_objects
   end
