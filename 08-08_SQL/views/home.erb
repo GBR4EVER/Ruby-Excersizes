@@ -1,7 +1,7 @@
-<% @users.each do |u_db|  %>
+<% @all_todos.each do |t|  %>
 
 <p>
-	<%= u_db.name %>
+	<%= t.name %> - <%= t.task %> - <%= t.priority %>
 </p>
 
 <% end %>
