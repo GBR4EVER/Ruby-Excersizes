@@ -9,7 +9,7 @@ require "sqlite3"
 require_relative "./Todo.rb"
 
 get "/" do
-  @all_todos = Todo.all
+  @all_users = Todo.all
   erb :home
 end
 

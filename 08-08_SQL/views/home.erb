@@ -1,9 +1,9 @@
-<% @all_todos.each do |t|  %>
+<% @all_users.each do |u|  %>
 
 <p>
-	<%= t.home %> - <%= t.work %> - <%= t.estTime %>
+	<%= u.name %> - <%= u.task %> - <%= u.priority %>
 	
-	<% if t.how_long_may_take? %>
+	<% if u.priority_rate? %>
 	(Not too long.)
 	<% else %>
 	(Too Long)

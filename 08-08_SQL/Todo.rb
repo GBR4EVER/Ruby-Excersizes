@@ -1,34 +1,34 @@
 
 class Todo
-  attr_reader :id, :home, :work, :estTime,
+  attr_reader :id, :name, :task, :priority,
   
-  def init(id, home, work, estTime)
+  def init(id, name, task, priority)
     @id = id
-    @home = home
-    @work = work
-    @estTime = estTime
+    @name = name
+    @task = task
+    @priority = priority
   end
 
   def self.all
-    db = SQLite3::Database.new "Todo.db"
+    db = SQLite3::Database.new "ToDo.db"
     db.results_as_hash = true
     
-    all_todos_from_db = db.execute("SELECT * FROM todos")
+    all_users_from_db = db.execute("SELECT * FROM users")
     
-    all_todos_from_db.each do |t_db|
-      id = t_db[0]["id"]
-      home = t_db[0]["home"]
-      work = t_db[0]["work"]
-      estTime = t_db[0]["estTime"]
+    all_users_from_db.each do |u_db|
+      id = u_db[0]["id"]
+      name = u_db[0]["name"]
+      task = u_db[0]["task"]
+      priority = u_db[0]["priority"]
       
-      all_todos_as_todo_objects << self.new(id, home, work, estTime)
+      all_users_as_todo_objects << self.new(id, name, task, priority)
     end
     
-    all_todos_as_todo_objects
+    all_users_as_user_objects
   end
   
-  def how_long_may_take
-    if @estTime >= 10
+  def priority_rating
+    if @priority >= 5
       true
     else
       false
