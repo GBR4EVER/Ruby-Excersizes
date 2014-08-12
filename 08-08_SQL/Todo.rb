@@ -16,7 +16,7 @@ class Todo
     db = SQLite3::Database.new "ToDo.db"
     db.results_as_hash = true
     
-    binding.pry
+    
     
     all_users_from_db = db.execute("SELECT * FROM users")
     
@@ -31,11 +31,12 @@ class Todo
       all_users_as_user_objects << self.new(id, name, task, priority)
     end
     
-    binding.pry
+    
     
     all_users_as_user_objects
   end
   
+  binding.pry
   def priority_rating
     if @priority >= 5
       true
@@ -46,5 +47,3 @@ class Todo
 end
     
     
-
-binding.pry
