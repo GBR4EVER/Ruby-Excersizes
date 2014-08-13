@@ -1,8 +1,8 @@
 development:
-	database: todo.db
+	database: todo_list.db
 	adapter: sqlite3
 	
 test:
-	database: todo_spec.db
+	database: todo_list_spec.db
 	adapter: sqlite3
 
