@@ -19,7 +19,7 @@ class Todo
     all_todos_from_db = db.execute("SELECT * FROM users")
     
     # sets all our data within our hash into a array.
-    all_todos_as_user_objects = []
+    all_todos_as_todo_objects = []
     
     # 't_db' is a hash with info from that column in it.
     all_todos_from_db.each do |t_db|
@@ -29,10 +29,10 @@ class Todo
       priority = t_db["priority"]
       
       # pushes our values from our hashed database into our new object Todo class.
-      all_todos_as_user_objects << self.new(id, name, task, priority)
+      all_todos_as_todo_objects << self.new(id, name, task, priority)
     end
     # Must return all the objects back after they have been pushed.
-    all_todos_as_user_objects
+    all_todos_as_todo_objects
   end
 
   def priority_rating
