@@ -48,7 +48,28 @@ qoutient
 
 # 4. Write a program that converts a mixed number (integer, numerator, denominator) into an improper fraction, e.g. 3 1/2 = 7/2. This problem is much easier if, instead of dealing with the fraction as a whole, you handle its numerator and denominator separately.
 
-
+def mix
+  print "We are going to convert a mixed number into a improper fraction.\n"
+  print "Now give me two numbers, first number being the numerator the second being the denominator.\n"
+  x = gets.chomp.to_i
+  y = gets.chomp.to_i
+  z = y % x
+  puts "#{z}_\n#{y}"
+end
+mix
 
 #-----------------------------------------------------------------  
 # 5. Write a program that takes a string, then uses the .upcase method to return the ALLCAPS version of that string, e.g. "Hello".upcase => "HELLO".
+
+def all_caps
+  caps = "This string is going to be all caps using the .upcase action!"
+  puts caps.upcase
+end
+all_caps
+
+#------------------------------------------------------------------
+
+# 6. Write a program that collects an integer value for Fahrenheit temperature and then outputs the corresponding Celsius temperature.
+
+def temp
+end
