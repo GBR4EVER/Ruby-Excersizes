@@ -1,8 +1,11 @@
 # 1. Learn what strings, integers, floats (floating point numbers), symbols and booleans are. Learn what values they can store.
 puts "This is a string"
+
 # A String object holds and manipulates an arbitrary sequence of bytes, typically representing characters. String objects may be created using String::new or as literals.
+
 3.downto(1) { |n| print n, ".. " }
 print " BOOM!\n"
+
 # This class is the basis for the two concrete classes that hold whole numbers, Bignum and Fixnum.
 # Above is a example of the down_to method being applied to create a string outputting to the console: 
 # 3.. 2.. 1.. BOOM!
@@ -33,7 +36,7 @@ puts "#{a} + #{b} = #{c}"
 a = 2.4
 b = 4
 c = "#{a + b}"
-puts c
+puts "#{a} + #{b} = #{c}"
 # Output: 2.4 + 4 = 6.4
 #-------------------------------------------------------------
 
@@ -54,7 +57,7 @@ print "And how old are you?"
 how_old_are_you = gets.chomp
 how_old_are_you.to_s
 
-puts "/n Your name is #{first_name} #{last_name} and you are #{how_old_are_you} years of age!"
+puts "Your name is #{first_name} #{last_name} and you are #{how_old_are_you} years of age!"
 # First your print command will ask the user for input and retain the information with gets.chomp after you have set the variable to whatever specificity.
 # .capitalize! - will capitalize the first letter of the given characters
 # This is another form of interpolation at work.
@@ -76,4 +79,3 @@ puts "\n #{number} is your favorite number!"
 # puts "1" + "1" will recognize "1" as a string and will group the two strings together outputting 11
 #-----------------------------------------------------------------
 
-#ww

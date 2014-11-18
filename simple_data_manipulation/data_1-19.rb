@@ -10,11 +10,45 @@
 # <, >, <=, >= | LESS THAN. Returns true if first operand is less than second operand. Otherwise returns false, | GREATER THAN | Returns true if first operand is greater than second operand. Otherwise returns false, | GREATER THEN OR EQUAL TO | Returns true if first operand is greater than or equal to second operand, Otherwise returns false, | LESS THAN OR EQUAL TO | Returns true if first operand is less than or equal to second operand. Otherwise returns false.
 # <=> | 	Combined comparison operator. Returns 0 if first operand equals second, 1 if first operand is greater than the second and -1 if first operand is less than the second.
 
-print "Can you please give me two numbers starting with the first one?\n"
-a = gets.chomp.to_i
+#---------------------------------------------------------------
 
-print "then the second number please?\n"
-b = gets.chomp.to_i
+# 2. Write a program that fetches a number from the user, then doubles it, then outputs the result.
+# Write a program that fetches a number from the user, squares it, then outputs the result.
+def double
+  print "Please give me a number.\n"
+  x = gets.chomp.to_i
+  y = x * 2
+  puts y
+end
+double
+
+def square
+  print "Now give me another number.\n"
+  x = gets.chomp.to_i
+  y = x * x
+  puts y
+end
+square
+
+#-----------------------------------------------------------------
+
+# 3. Write a program that prompts the user for two integers, then displays the integer quotient and integer result to the screen, like so: 7 / 3 = 2 r 1. Consider using string interpolation to make your life easier.
+
+def qoutient
+  print "Give me two numbers please.\n"
+  x = gets.chomp.to_i
+  y = gets.chomp.to_i
+  w = x / y
+  z = x % y
+  puts "#{x} / #{y} = #{w} r #{z}"
+end
+qoutient
+
+#-----------------------------------------------------------------
+
+# 4. Write a program that converts a mixed number (integer, numerator, denominator) into an improper fraction, e.g. 3 1/2 = 7/2. This problem is much easier if, instead of dealing with the fraction as a whole, you handle its numerator and denominator separately.
 
 
+
+#-----------------------------------------------------------------  
 # 5. Write a program that takes a string, then uses the .upcase method to return the ALLCAPS version of that string, e.g. "Hello".upcase => "HELLO".
