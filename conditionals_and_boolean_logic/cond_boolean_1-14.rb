@@ -11,7 +11,7 @@ else
 end
 # If what comes after if is true, then that code is ran. If not, we would not run the code.
 # If you would want to create a exception to the if statement you can use else that if the if statement is not true, it will move down the next line of code to the else statement and output that code.
-# Now if you wanted to have two options for if statement to branch to you would implement the elseif statement.
+# Now if you wanted to have two options for an if statement to branch to, you would implement the elseif statement.
 # For Example
 if 5 > 7
   puts "something is wrong"
@@ -20,6 +20,7 @@ elsif 5 < 7
 else
   "they are both equal"
 end
+
 #---------------------------------------------------------
 
 # 2. Know how to use case and when statements to create switches.
@@ -39,6 +40,7 @@ when "D"
 else
   puts "That's not a grade"
 end
+
 #------------------------------------------------------------
 
 # 3. Write a program which prompts the user for a number, outputs "Valid" if the number is positive, or "Invalid" if the number is less than or equal to zero.
@@ -50,6 +52,7 @@ if n > 0
 else n >= 0
   puts "Invalid"
 end
+
 #-------------------------------------------------------------
 
 # 4. Write a program which prompts the user for a number and outputs "Valid" if the number is between 1 and 10 (inclusive) and "Invalid" otherwise.
@@ -60,6 +63,7 @@ n = gets.chomp.to_i
   else (11..20).include?(n)
     puts "Invalid"
 end
+
 #-------------------------------------------------------------
 
 # 5. Write a program which prompts the user for an integer and outputs whether than integer is even or odd (hint: even numbers have a remainder of 0 when divided by 2; odd numbers have a remainder of 1 when divided by 2)
@@ -71,6 +75,7 @@ if number % 2 == 0
 else number % 2 == 1
   puts "That is a odd number"
 end
+
 #-------------------------------------------------------------
 
 # 6. Write a program which asks the user for 3 numbers and sorts them from least to greatest using nothing but if, elsif and else statements. Output the result.
@@ -87,7 +92,6 @@ else (a < b && b < c && a < c)
   puts c, b, a;
 end
 
-  
 #--------------------------------------------------------------
 
 # 7. Write a program which prompts the user for an all-caps string and which then checks to see if that string is indeed all-caps.
@@ -98,25 +102,27 @@ if caps == caps.upcase
 elsif caps == caps.downcase
   puts "Invalid, it must be all caps!"
 end
+
 #---------------------------------------------------------------
 
 # 8. Create a menu (perhaps for food or drinks?) which asks the user to input a number corresponding to their choice of item, and which then prints "Delivering [that item]." Use a case statement. Make sure to account for invalid inputs using an else.
 print "Enter your combo number\n"
 combo = gets.chomp.to_i
 case combo
-when "1"
+when 1
   puts "Burger"
-when "2"
+when 2
   puts "Nuggets"
-when "3"
+when 3
   puts "Chicken"
-when "4"
+when 4
   puts "Fish"
 else
   puts "We only have combos 1 through 4\n"
 end
 
 puts "Delivering #{combo}"
+
 #-------------------------------------------------------------
 
 # 9. Learn how to use the ternary operator.
@@ -135,3 +141,31 @@ puts "Delivering #{combo}"
 #---------------------------------------------------------------
 
 # 10. Learn how to use the unless keyword.
+# The unless keyword or conditional is almost the same as using a if conditional.
+
+# For example:
+
+# raise InvalidFormat unless AllowedFormats.include?(format)
+
+# When actually it read sbetter like so:
+
+# raise InvalidFormat if !AllowedFormats.include?(format)
+
+#---------------------------------------------------------------
+
+# 11. Prompt the user for a positive odd number (or a positive even number, or...). Write a program that uses a nested if-statement to determine if the user's input fulfills the conditions. Now write one that uses the logical operators (&& and/or ||) to do the same test, but in less time.
+def nested
+  print "Enter in a odd number"
+  z = gets.chomp.to_i
+  if z % 2 == 1
+    puts "That is a odd number, thank you."
+    if z % 2 == 0
+      puts "That number won't work, it's even!"
+    else
+      puts "Cool"
+    end
+  else
+    puts "Z needs to be a odd number."
+  end
+end
+nested
