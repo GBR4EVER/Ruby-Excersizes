@@ -72,4 +72,9 @@ all_caps
 # 6. Write a program that collects an integer value for Fahrenheit temperature and then outputs the corresponding Celsius temperature.
 
 def temp
+  print "Please give me the temperature right now, I will give you the corresponding celcius temperature."
+  x = gets.chomp.to_f
+  y = (x - 32) * 5.0 / 9.0
+  puts "It is now #{y} celcius."
 end
+temp
