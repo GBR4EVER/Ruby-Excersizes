@@ -62,7 +62,7 @@ mix
 # 5. Write a program that takes a string, then uses the .upcase method to return the ALLCAPS version of that string, e.g. "Hello".upcase => "HELLO".
 
 def all_caps
-  caps = "This string is going to be all caps using the .upcase action!"
+  caps = "This string is going to be all caps using the .upcase action!\n"
   puts caps.upcase
 end
 all_caps
@@ -72,7 +72,7 @@ all_caps
 # 6. Write a program that collects an integer value for Fahrenheit temperature and then outputs the corresponding Celsius temperature.
 
 def temp
-  print "Please give me the temperature right now, I will give you the corresponding celcius temperature."
+  print "Please give me the temperature right now, I will give you the corresponding celcius temperature.\n"
   x = gets.chomp.to_f
   y = (x - 32) * 5.0 / 9.0
   puts "It is now #{y} celcius."
