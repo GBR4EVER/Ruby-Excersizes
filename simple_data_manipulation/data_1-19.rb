@@ -1,4 +1,4 @@
-print "1. Learn about Ruby operator precedence with regard to arithmetic. How does it compare to the Order of Operations (PEMDAS) you learned in school? Learn what each of the operators (listed below) does, then write a program that asks the user for two numbers, then outputs the result of each of these operators on those numbers. Make sure you can describe, in your own words, what each operator does.
+# 1. Learn about Ruby operator precedence with regard to arithmetic. How does it compare to the Order of Operations (PEMDAS) you learned in school? Learn what each of the operators (listed below) does, then write a program that asks the user for two numbers, then outputs the result of each of these operators on those numbers. Make sure you can describe, in your own words, what each operator does.
 # + | Addition
 # - | Subtraction
 # * | Multipication
@@ -10,7 +10,7 @@ print "1. Learn about Ruby operator precedence with regard to arithmetic. How do
 # <, >, <=, >= | LESS THAN. Returns true if first operand is less than second operand. Otherwise returns false, | GREATER THAN | Returns true if first operand is greater than second operand. Otherwise returns false, | GREATER THEN OR EQUAL TO | Returns true if first operand is greater than or equal to second operand, Otherwise returns false, | LESS THAN OR EQUAL TO | Returns true if first operand is less than or equal to second operand. Otherwise returns false.
 # <=> | 	Combined comparison operator. Returns 0 if first operand equals second, 1 if first operand is greater than the second and -1 if first operand is less than the second."
 
-"#---------------------------------------------------------------"
+#---------------------------------------------------------------"
 
 # 2. Write a program that fetches a number from the user, then doubles it, then outputs the result.
 # Write a program that fetches a number from the user, squares it, then outputs the result.
@@ -81,4 +81,5 @@ temp
 
 #------------------------------------------------------------------
 
-# 7. 
+# 7. Write a program that calculates how to break a monetary value (expressed as 43.21, that is, without the dollar sign) into the simplest possible change (expressed as dollars, quarters, dimes, nickels, and pennies) NB: "Simplest" change just means the fewest number of bills and coins possible for a given amount. As a hint, you'll need to use % and /. It may also be easiest to convert the money amount from being in terms of dollars to being in terms of pennies (for example, $43.21 is 4321 pennies)
+
