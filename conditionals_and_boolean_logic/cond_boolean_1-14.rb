@@ -169,3 +169,48 @@ def nested
   end
 end
 nested
+
+#----------------------------------------------------------------
+
+def years
+  print "Please give me the current day 1 through 30?\n"
+  day = gets.chomp.to_i
+  print "Please give me the current month 1 through 12?\n"
+  month = gets.chomp.to_i
+  print "Please give me the current year."
+  year = gets.chomp.to_i
+  
+  if day == days
+    puts "ok, good."
+  elsif day != days
+    puts "That's not a day of the year."
+  else
+    puts "Your not really giving me enough to go off of here."
+  end
+  
+  if month == months
+    puts "ok, good."
+  elsif month != months
+    puts "That's not a complete month."
+  else
+    puts "That's not a month in the year"
+  end
+  
+  if year == years
+    puts "ok, good."
+  elsif year != years
+    puts "That is not the current date."
+  else
+    puts "What are you doing?"
+  end
+  
+end
+
+def current_date
+  days = [1..365]
+  months = [1..12]
+  years = [1900..2050]
+end
+  
+  
+  
