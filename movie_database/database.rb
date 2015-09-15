@@ -4,7 +4,7 @@ require "pry"
 class database
   attr_accessor :movie
   
-  # Initializes the Portfolio object with an empty Array of Stocks.
+  # Initializes the movie object with an empty Array starting out.
   def initialize
     @movie = []
   end
@@ -18,15 +18,5 @@ class database
     @movie << movie
   end
   
-  # Returns the total Integer value of all Stocks.
-  # def value
-  #   v = 0
-  #
-  #   @stocks.each do |s|
-  #     v += s.total_value_usd
-  #   end
-  #
-  #   return v
-  # end
 end
   
