@@ -21,7 +21,9 @@ body {
 
 
 	<% @now_playing.each do |n| %>
-		<img src="http://image.tmdb.org/t/p/w154/<%=n.poster_path%>" />
+		<a href="/movieid/:movieid">
+      <img src="http://image.tmdb.org/t/p/w154/<%=n.poster_path%>"/>
+    </a>
 	<% end %>
 
 </body>
