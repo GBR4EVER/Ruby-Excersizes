@@ -1,12 +1,12 @@
 #require "pry"
 class Game
   attr_reader :turn
-  attr_accessor :board :easy
+  # attr_accessor :board :easy
   
   def initialize
     @turn = 1
     @board = { a1: " ", a2: " ", a3: " ", b1: " ", b2: " ", b3: " ", c1: " ", c2: " ", c3: " " }
-    @easy = easy
+    # @easy = easy
   end
   
    def start_game
@@ -67,7 +67,7 @@ class Game
     else
       puts "Player 2 it is your turn."
       @turn = 1
-      player_move(@easy)
+      player_move(@p2)
     end
   end
 
