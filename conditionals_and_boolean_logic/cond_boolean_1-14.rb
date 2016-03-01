@@ -5,8 +5,9 @@ puts "What is you name?"
 name = gets.chomp
 if name == "Corey"
   puts "What a great name!"
-else
+elsif name != "Corey"
   puts "Why would you have that as name?\n"
+else
   puts "I don't think we can be friends :("
 end
 # If what comes after if is true, then that code is ran. If not, we would not run the code.
@@ -83,7 +84,7 @@ print "Please give me 3 numbers\n"
 a = gets.chomp.to_i
 b = gets.chomp.to_i
 c = gets.chomp.to_i
-# The iterators sort from greatest to least
+# The iterators sort from least to greatest.
 if (a < b && b > c && a < c)
   puts b, c, a;
 elsif (a > b && b > c && a > c)
@@ -121,7 +122,7 @@ else
   puts "We only have combos 1 through 4\n"
 end
 
-puts "Delivering #{combo}"
+puts "Delivering the #{combo}"
 
 #-------------------------------------------------------------
 
@@ -155,7 +156,7 @@ puts "Delivering #{combo}"
 
 # 11. Prompt the user for a positive odd number (or a positive even number, or...). Write a program that uses a nested if-statement to determine if the user's input fulfills the conditions. Now write one that uses the logical operators (&& and/or ||) to do the same test, but in less time.
 def nested
-  print "Enter in a odd number"
+  print "Enter in a positive odd number"
   z = gets.chomp.to_i
   if z % 2 == 1
     puts "That is a odd number, thank you."
@@ -165,7 +166,7 @@ def nested
       puts "Cool"
     end
   else
-    puts "Z needs to be a odd number."
+    puts "It needs to be a odd number."
   end
 end
 nested
@@ -179,7 +180,7 @@ def years
   month = gets.chomp.to_i
   print "Please give me the current year."
   year = gets.chomp.to_i
-  
+
   if day == days
     puts "ok, good."
   elsif day != days
@@ -187,7 +188,7 @@ def years
   else
     puts "Your not really giving me enough to go off of here."
   end
-  
+
   if month == months
     puts "ok, good."
   elsif month != months
@@ -195,7 +196,7 @@ def years
   else
     puts "That's not a month in the year"
   end
-  
+
   if year == years
     puts "ok, good."
   elsif year != years
@@ -203,7 +204,7 @@ def years
   else
     puts "What are you doing?"
   end
-  
+
 end
 
 def current_date
