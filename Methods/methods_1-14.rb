@@ -57,6 +57,9 @@ puts greeting
 def sum_these_numbers
   n1 = 2
   n2 = 4
+  n3 = n1 + n2
+end
+puts sum_these_numbers
 
   
   
